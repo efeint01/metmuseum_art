@@ -25,6 +25,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements DepartmentAdapter.OnDepartmentListener {
 
+    /* 10.03.2023 
+    Created by Efe İnanç */
+    
     ActivityMainBinding binding;
     SplashScreen splashScreen;
 
