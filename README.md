@@ -27,6 +27,6 @@
   
 ## Authors and Acknowledgments 
 
-- [@metmuseum](https://metmuseum.github.io) API.
+- [@metmuseum](https://metmuseum.github.io) Thanks for providing API.
 
   
