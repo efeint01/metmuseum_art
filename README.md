@@ -7,7 +7,7 @@ An Android app that displays hundreds of thousands of museum artworks by departm
     
 ## App Overview
 
-![App screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App screenshot](https://github.com/efeint01/metmuseum_art/blob/master/design/app_overview.png?raw=true)
 
   
 ## Project License
