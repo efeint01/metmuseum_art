@@ -8,6 +8,8 @@
 ## App Overview
 
 ![App screenshot](https://github.com/efeint01/metmuseum_art/blob/master/design/app_overview.png?raw=true)
+![App gif 1](https://github.com/efeint01/metmuseum_art/blob/master/design/app1.gif?raw=true)
+![App gif 2](https://github.com/efeint01/metmuseum_art/blob/master/design/app2.gif?raw=true)
 
 
 
