@@ -22,8 +22,6 @@ public class ObjectAdapter extends RecyclerView.Adapter<ObjectAdapter.ViewHolder
     RequestManager glideManager;
     ArrayList<ObjectItem> arrayList;
     Context context;
-
-
     OnObjectListener objectListener;
 
     public ObjectAdapter(ArrayList<ObjectItem> arrayList, Context context, OnObjectListener objectListener) {

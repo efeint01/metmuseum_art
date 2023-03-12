@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements DepartmentAdapter
             try {
                 int total = response.getInt("total");
                 Log.e(TAG, "Total objects for " + departmentName + ": " + total);
-                int objId = response.getJSONArray("objectIDs").getInt(RandomGenerator.getRandomNumber(0,total));
+                int objId = response.getJSONArray("objectIDs").getInt(RandomGenerator.getRandomNumber(0,total-1));
                 getObjectData(departmentId, objId, departmentName, index);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -137,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements DepartmentAdapter
             adapter.notifyItemInserted(index);
         }
         showContent = true;
-        Log.e(TAG, "addArraylist: " + name);
     }
 
 

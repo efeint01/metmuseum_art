@@ -15,12 +15,12 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.app.metmuseum_art.R;
-import com.app.metmuseum_art.fragments.ObjectDetailFragment;
-import com.app.metmuseum_art.utilities.EndlessRecyclerViewScrollListener;
-import com.app.metmuseum_art.utilities.VolleySingleton;
 import com.app.metmuseum_art.adapters.ObjectAdapter;
 import com.app.metmuseum_art.databinding.ActivityObjectsBinding;
+import com.app.metmuseum_art.fragments.ObjectDetailFragment;
 import com.app.metmuseum_art.models.ObjectItem;
+import com.app.metmuseum_art.utilities.EndlessRecyclerViewScrollListener;
+import com.app.metmuseum_art.utilities.VolleySingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,7 +41,7 @@ public class ObjectsActivity extends AppCompatActivity implements ObjectAdapter.
     String departmentName;
     int departmentId;
     int itemsCount;
-    int fetchDataCount = 20; //We will fetch 20 items
+    int fetchDataCount = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class ObjectsActivity extends AppCompatActivity implements ObjectAdapter.
 
         binding.toolbar.setTitle(departmentName);
 
-        getObjects(departmentId, departmentName);
+        getObjects(departmentId);
 
     }
 
@@ -77,14 +77,16 @@ public class ObjectsActivity extends AppCompatActivity implements ObjectAdapter.
         binding.recylerView.addOnScrollListener(new EndlessRecyclerViewScrollListener(layoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
-                itemsCount += 20;
-                getObjects(departmentId, departmentName);
+                Log.e(TAG, "PAGE" + page);
+                Log.e(TAG, "fetchDataCount: " + fetchDataCount);
+                itemsCount += fetchDataCount;
+                getObjects(departmentId);
             }
         });
 
     }
 
-    private void getObjects(int departmentId, String depName) {
+    private void getObjects(int departmentId) {
         //Get object from department
         String query = "https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds= " + departmentId;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(query, response -> {
@@ -93,7 +95,7 @@ public class ObjectsActivity extends AppCompatActivity implements ObjectAdapter.
                 Log.e(TAG, "Total founded objects: " + total);
                 JSONArray objectIDs = response.getJSONArray("objectIDs"); //object ids in department
                 //Get first ($fetchDataCount) object ids
-                for (int i = itemsCount; i < itemsCount+fetchDataCount; i++) {
+                for (int i = itemsCount; i < itemsCount + fetchDataCount; i++) {
                     int objId = objectIDs.getInt(i);
                     getObjectInfo(objId, i);
                 }
