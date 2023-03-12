@@ -21,6 +21,10 @@
 
 - ⚠️ Parental advisory explicit content (App may contain sexual images) 
 
+
+## Used Technologies
+Android Java, Glide, Volley, Android Palette, Splash Screen, PhotoView
+
 ## Project License
 
 [MIT](https://choosealicense.com/licenses/mit/)
@@ -29,5 +33,6 @@
 ## Authors and Acknowledgments 
 
 - [@metmuseum](https://metmuseum.github.io) Thanks for providing API.
+- [@martin00](https://github.com/Baseflow/PhotoView) PhotoView.
 
   
