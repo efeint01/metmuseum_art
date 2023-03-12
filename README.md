@@ -32,7 +32,7 @@ Android Java, Glide, Volley, Android Palette, Splash Screen, PhotoView
   
 ## Authors and Acknowledgments 
 
-- [@metmuseum](https://metmuseum.github.io) Thanks for providing API.
+- [@metmuseum](https://metmuseum.github.io) Metmuseum Global API.
 - [@martin00](https://github.com/Baseflow/PhotoView) PhotoView.
 
   
