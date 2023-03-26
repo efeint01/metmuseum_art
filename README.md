@@ -8,6 +8,7 @@ The application allows users to easily browse artworks by department, making it 
 To ensure the accuracy and freshness of the data, the application is regularly updated with the latest museum information. This ensures that users have access to the most up-to-date data and artworks available.
 
 Overall, this Android app provides a comprehensive and user-friendly way for art enthusiasts to explore and learn about a vast array of museum data and artworks from around the world.
+
 ![Logo](https://i.ibb.co/w6dCZq6/placeholder.png)
 
     
