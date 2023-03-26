@@ -30,7 +30,7 @@ Overall, this Android app provides a comprehensive and user-friendly way for art
 
 
 ## Used Technologies
-Android Java, RecylerView , Glide, Volley, Android Palette, Splash Screen, PhotoView
+Android Java, RecylerView, Glide, Volley, Android Palette, Splash Screen, PhotoView
 
 ## Project License
 
